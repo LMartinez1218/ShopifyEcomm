@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useDispatch } from 'react-redux';
 import { IconButton, Box, Typography, useTheme, Button } from '@mui/material';
-import AddIcon from "@mui/material/Add";
+import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
 import { shades } from "../theme";
 import { addToCart } from "../state";
@@ -11,7 +11,7 @@ const Item = ({ item, width}) => {
     const navigate = useNavigate();
     const dispatch = useDispatch();
     const [count, setCount] = useState(1);
-    const [isHovered, setHovered] = useState(false);
+    const [isHovered, setIsHovered] = useState(false);
     const {
         palette: { neutral },
     } = useTheme();
@@ -31,7 +31,7 @@ const Item = ({ item, width}) => {
     return (
         <Box width={width}>
             <Box 
-            position="relative"             onMouseOver={() => setIsHovered(true)}
+            position="relative" onMouseOver={() => setIsHovered(true)}
             onMouseOut={() => setIsHovered(false)}
             >
                 <img 
@@ -96,3 +96,5 @@ const Item = ({ item, width}) => {
         </Box>
     )
 };
+
+export default Item;
