@@ -7,10 +7,11 @@ import {
 } from 'react-router-dom';
 import Checkout from './scenes/checkout/Checkout';
 import Confirmation from './scenes/checkout/Confirmation';
-import Home from "./scenes/home/Home"
+import Home from "./scenes/home/Home";
 import ItemDetails from './scenes/ItemDetails/ItemDetails';
-import Navbar from './scenes/global/Navarbar'
-import CartMenu from './scenes/global/CartMenu'
+import Navbar from './scenes/global/Navarbar';
+import CartMenu from './scenes/global/CartMenu';
+import Footer from './scenes/global/Footer';
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -35,6 +36,7 @@ function App() {
         <Route path="checkout/success" element={<Confirmation />} />
       </Routes>
       <CartMenu />
+      <Footer />
       </BrowserRouter>
     
     </div>
